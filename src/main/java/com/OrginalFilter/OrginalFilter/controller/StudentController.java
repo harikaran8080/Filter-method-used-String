@@ -34,10 +34,10 @@ public class StudentController {
 		return implement.postall(dto);
 	}
 	
-	@GetMapping("/get/{studentName}")
-	public StudentDto get(@PathVariable String studentName) {
-		return implement.get(studentName);
-	}
+//	@GetMapping("/get/{studentName}")
+//	public StudentDto get(@PathVariable String studentName) {
+//		return implement.get(studentName);
+//	}
 	
 	
 	@GetMapping("/getall")
@@ -55,6 +55,23 @@ public class StudentController {
 	public String delete(@PathVariable int studentId) {
 		return implement.delete(studentId);
 	}
+	
+	@GetMapping("/getzz")
+	public List<Object>getzz(@RequestParam (value = "key") Object key){
+		return implement.getzz(key);
+	}
+	
+	@GetMapping("/getquery")
+	public List<Object>give(@RequestParam (value = "list") Object list){
+		return implement.give(list);
+	}
+
+	@GetMapping("/gett/{word}")
+	public List<Object>gett(@PathVariable (value = "word")String word){
+		return implement.gett(word);
+	}
+	
+
 
 	
 

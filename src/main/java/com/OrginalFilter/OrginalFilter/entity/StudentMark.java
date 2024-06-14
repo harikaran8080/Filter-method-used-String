@@ -13,21 +13,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "studentmark")
+@Table(name = "student_mark")
 public class StudentMark {
 	@Id
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
-	private int id;
+	private int markId;
 	
-	private String Tamil;
-	
-	private String english;
-	
-	private String maths;
-	
-	private String science;
-	
-	private String socialscience;
+	private String totalMark;
 	
 
 }

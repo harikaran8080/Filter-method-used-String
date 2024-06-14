@@ -11,15 +11,6 @@ public class StudentMarkDto {
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String Tamil;
-	
-	private String english;
-	
-	private String maths;
-	
-	private String science;
-	
-	private String socialscience;
-	
+	private String totalMark;
 
 }

@@ -10,13 +10,23 @@ public interface ServiceImplement {
 
 	List<StudentDto> postall(List<StudentDto> dto);
 
-	StudentDto get(String studentName);
+//	StudentDto get(String studentName);
 
 	List<StudentDto> getall();
 
 	StudentDto update(StudentDto dto);
 
 	String delete(int studentId);
+
+	List<StudentDto> getz(String studentname);
+
+	List<Object> getzz(Object key);
+
+	List<Object> give(Object list);
+
+	List<Object> gett(String word);
+
+	
 
 
 }

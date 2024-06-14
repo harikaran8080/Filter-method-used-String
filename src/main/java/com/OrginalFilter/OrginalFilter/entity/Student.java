@@ -27,7 +27,7 @@ public class Student {
 	
 	private int classs;
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name ="id")
+	@JoinColumn(name ="markId")
 	private StudentMark mark;
 	
 	

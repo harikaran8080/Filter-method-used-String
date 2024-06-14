@@ -55,17 +55,17 @@ public class StudentService implements ServiceImplement {
 
 	}
 
-	@Override
-	public StudentDto get(String studentName) {
-		Student student=repository.findByStudentName(studentName);
-		StudentDto dto=new StudentDto();
-		dto.setClasss(student.getClasss());
-		dto.setMark(student.getMark());
-		dto.setStudentId(student.getStudentId());
-		dto.setStudentName(student.getStudentName());
-		return dto;
-		
-	}
+//	@Override
+//	public StudentDto get(String studentName) {
+//		Student student=repository.findByStudentName(studentName);
+//		StudentDto dto=new StudentDto();
+//		dto.setClasss(student.getClasss());
+//		dto.setMark(student.getMark());
+//		dto.setStudentId(student.getStudentId());
+//		dto.setStudentName(student.getStudentName());
+//		return dto;
+//		
+//	}
 
 	@Override
 	public List<StudentDto> getall() {
@@ -101,5 +101,29 @@ public class StudentService implements ServiceImplement {
 		repository.deleteById(studentId);
 		return "Successsfully Deleted";
 	}
+
+	@Override
+	public List<StudentDto> getz(String studentname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Object> getzz(Object key) {
+		return repository.findByKey(key);
+	}
+
+	@Override
+	public List<Object> give(Object list) {
+		return repository.findByObj(list);
+	}
+
+	@Override
+	public List<Object> gett(String word) {
+		return repository.findByWord(word);
+	}
+
+
+
 
 }

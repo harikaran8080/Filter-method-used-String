@@ -2,6 +2,7 @@ package com.OrginalFilter.OrginalFilter.service;
 
 import java.util.List;
 
+import com.OrginalFilter.OrginalFilter.dto.StudentAndMarkDto;
 import com.OrginalFilter.OrginalFilter.dto.StudentDto;
 
 public interface ServiceImplement {
@@ -25,6 +26,10 @@ public interface ServiceImplement {
 	List<Object> give(Object list);
 
 	List<Object> gett(String word);
+
+	List<Object> getvalues(Object getvalues);
+
+	List<StudentAndMarkDto> getdto(String shorts);
 
 	
 

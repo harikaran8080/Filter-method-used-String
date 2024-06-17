@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.OrginalFilter.OrginalFilter.dto.StudentAndMarkDto;
 import com.OrginalFilter.OrginalFilter.dto.StudentDto;
 import com.OrginalFilter.OrginalFilter.entity.Student;
 import com.OrginalFilter.OrginalFilter.repository.StudentRepository;
@@ -121,6 +122,23 @@ public class StudentService implements ServiceImplement {
 	@Override
 	public List<Object> gett(String word) {
 		return repository.findByWord(word);
+	}
+
+	@Override
+	public List<Object> getvalues(Object getvalues) {
+		return repository.findByGetValues(getvalues);
+	}
+
+	@Override
+	public List<StudentAndMarkDto> getdto(String shorts) {
+		if(shorts==null) {
+			return repository.findAllShorts();
+
+		}
+		else {
+			return repository.findByShorts(shorts);
+			
+		}
 	}
 
 

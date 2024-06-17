@@ -7,8 +7,7 @@ import lombok.Data;
 
 @Data
 public class StudentMarkDto {
-	@Id
-	@GeneratedValue( strategy = GenerationType.IDENTITY)
+	
 	private int id;
 	
 	private String totalMark;

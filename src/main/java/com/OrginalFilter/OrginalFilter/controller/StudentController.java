@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.OrginalFilter.OrginalFilter.dto.StudentAndMarkDto;
 import com.OrginalFilter.OrginalFilter.dto.StudentDto;
 import com.OrginalFilter.OrginalFilter.service.ServiceImplement;
 
@@ -69,6 +70,18 @@ public class StudentController {
 	@GetMapping("/gett/{word}")
 	public List<Object>gett(@PathVariable (value = "word")String word){
 		return implement.gett(word);
+	}
+	
+	@GetMapping("/getvalues")
+	public List<Object>getvalues(@RequestParam (value = "getvalues") Object getvalues){
+		return implement.getvalues(getvalues);
+		
+	}
+	
+	@GetMapping("/getdto")
+	public List<StudentAndMarkDto>getdto(@RequestParam (value = "shorts",required = false)String shorts){
+		return implement.getdto(shorts);
+		
 	}
 	
 
